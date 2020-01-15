@@ -1,4 +1,6 @@
 import tkinter
+from tkinter import *
+from tkinter import ttk
 #FRAMEWORK
 window = tkinter.Tk()
 
@@ -19,9 +21,9 @@ def buildButton(frame, key, r, c):
     tkinter.Button(frame, buttonOptions).grid(row=r, column=c)
 
 
-label = tkinter.Label(window, textvariable=screen)
+label = ttk.Label(window, textvariable=screen)
 label.pack()
-frame = tkinter.Frame(window)
+frame = ttk.Frame(window)
 frame.pack()
 for r in range(3):
     for c in range(1, 4):
@@ -40,6 +42,8 @@ buildButton(frame, 'Mc', 2, 4)
 buildButton(frame, 'C', 3, 4)
 
 # CONTROLLER
+
+
 class FSM():
     fsmGraph = list()
     # State 0
